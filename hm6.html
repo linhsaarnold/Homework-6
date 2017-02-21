@@ -64,7 +64,7 @@
         <div class="panel-heading" text-center>BELL PEPPERS</div>
         <div class="panel-body"><img src="https://github.com/linhsaarnold/Homework-5/blob/master/Bell%20Peppers.png?raw=true" class="img-responsive" alt="Bell Peppers"></div>
         <div class="add-button" text-center>
-            <button onclick="javascript:add(1)">Add Bell Peppers ($1)</button>
+            <button id="BellPeppers" onclick="javascript:add(1); myFunction1()">Add Bell Peppers ($1)</button>
         </div>
       </div>
     </div>
@@ -73,7 +73,7 @@
         <div class="panel-heading" text-center>MUSHROOMS</div>
         <div class="panel-body"><img src="https://github.com/linhsaarnold/Homework-5/blob/master/Mushroom.jpg?raw=true" class="img-responsive" alt="Mushrooms"></div>
         <div class="add-button" text-center>
-            <button onclick="javascript:add(1)">Add Mushrooms ($1)</button>
+            <button onclick="javascript:add(1); myFunction2()">Add Mushrooms ($1)</button>
         </div>
       </div>
     </div>
@@ -82,7 +82,7 @@
         <div class="panel-heading" text-center>BACON</div>
         <div class="panel-body"><img src="https://github.com/linhsaarnold/Homework-5/blob/master/Bacon.jpg?raw=true" class="img-responsive" alt="Bacon"></div>
         <div class="add-button" text-center>
-            <button onclick="javascript:add(1)">Add Bacon ($1)</button>
+            <button onclick="javascript:add(1); myFunction3()">Add Bacon ($1)</button>
         </div>
       </div>
     </div>
@@ -92,64 +92,167 @@
         <div class="col-sm-12">
           <div class="input-group">
             <span class="input-group-btn">
-            <button class="btn btn-secondary" onclick="javascript:add(2)">Add ($2)</button>
+            <button class="btn btn-secondary" onclick="javascript:add(2); myFunction4()">Add ($2)</button>
             </span>
-            <input type="text" class="form-control" placeholder="Add up to 5 custom toppings...">
+            <input type="text" id="topping1" class="form-control" placeholder="Add up to 5 custom toppings...">
           </div>
         </div>
         <br>
         <div class="col-sm-12">
           <div class="input-group">
             <span class="input-group-btn">
-            <button class="btn btn-info" onclick="javascript:add(2)">Add ($2)</button>
+            <button class="btn btn-info" onclick="javascript:add(2); myFunction5()">Add ($2)</button>
             </span>
-            <input type="text" class="form-control" placeholder="...">
+            <input type="text" id="topping2" class="form-control" placeholder="...">
           </div>
         </div>
         <br>
         <div class="col-sm-12">
           <div class="input-group">
             <span class="input-group-btn">
-            <button class="btn btn-secondary" onclick="javascript:add(2)">Add ($2)</button>
+            <button class="btn btn-secondary" onclick="javascript:add(2); myFunction6()">Add ($2)</button>
             </span>
-            <input type="text" class="form-control" placeholder="...">
+            <input type="text" id="topping3" class="form-control" placeholder="...">
           </div>
         </div>
         <br>
         <div class="col-sm-12">
           <div class="input-group">
             <span class="input-group-btn">
-            <button class="btn btn-info" onclick="javascript:add(2)">Add ($2)</button>
+            <button class="btn btn-info" onclick="javascript:add(2); myFunction7()">Add ($2)</button>
             </span>
-            <input type="text" class="form-control" placeholder="...">
+            <input type="text" id="topping4" class="form-control" placeholder="...">
           </div>
         </div>
         <br>
         <div class="col-sm-12">
           <div class="input-group">
             <span class="input-group-btn">
-            <button class="btn btn-secondary" onclick="javascript:add(2)">Add ($2)</button>
+            <button class="btn btn-secondary" onclick="javascript:add(2); myFunction8()">Add ($2)</button>
             </span>
-            <input type="text" class="form-control" placeholder="...">
+            <input type="text" id="topping5" class="form-control" placeholder="...">
           </div>
         </div>
       </div>
     </div>
   </div>
 </div><br>
+</script>
+
 
 <div class="container">    
   <div class="row">
-    <div class="col-sm-12 bg-info container text-center">
-         <div class="Totals">
-            Total $<span id="Total">0</span> 
-            <div id="Buttons">
-                 <button onclick="javascript:reset()">Clear</button>
-            </div>
-         </div>
+    <div class="col-sm-12 bg-info container text-center" id="receipt">
+
+          <h1>Receipt:</h1>
+          <br>
+          <p id="addcustom1"></p>
+          <br>
+          <p id="addcustom2"></p>
+          <br>
+          <p id="addcustom3"></p>
+          <br>
+          <p id="addcustom4"></p>
+          <br>
+          <p id="addcustom5"></p>
+          <br>
+          <p id="addcustom6"></p>
+          <br>
+          <p id="addcustom7"></p>
+          <br>
+          <p id="addcustom8"></p>
+
+<script>
+function myFunction1() {
+    txt1 = "Bell Peppers"
+    document.getElementById("addcustom1").innerHTML = txt1;
+}
+</script>
+
+<script>
+function myFunction2() {
+    txt2 = "Mushrooms"
+    document.getElementById("addcustom2").innerHTML = txt2;
+}
+</script>
+
+<script>
+function myFunction3() {
+    txt3 = "Bacon"
+    document.getElementById("addcustom3").innerHTML = txt3;
+}
+</script>
+
+<script>
+function myFunction4() {
+    txt4 = document.getElementById("topping1").value;
+    document.getElementById("addcustom4").innerHTML = txt4;
+}
+</script>
+
+<script>
+function myFunction5() {
+    txt5 = document.getElementById("topping2").value;
+    document.getElementById("addcustom5").innerHTML = txt5;
+}
+</script>
+
+<script>
+function myFunction6() {
+    txt6 = document.getElementById("topping3").value;
+    document.getElementById("addcustom6").innerHTML = txt6;
+}
+</script>
+
+<script>
+function myFunction7() {
+    txt5 = document.getElementById("topping4").value;
+    document.getElementById("addcustom7").innerHTML = txt5;
+}
+</script>
+
+<script>
+function myFunction8() {
+    txt8 = document.getElementById("topping5").value;
+    document.getElementById("addcustom8").innerHTML = txt8;
+}
+</script>
+   
+      
+          Subtotal $<span id="Subtotal">0</span> 
+          <br>
+          Tax $<span id="Tax">0</span>
+          <br>
+          Total $<span id="Total">0</span>
+          <br>
+          <button onclick="javascript:reset(); myFunction9()">Clear</button>
+
+<script>
+function myFunction9(){
+  txt1 = " "
+  txt2 = " "
+  txt3 = " "
+  txt4 = " "
+  txt5 = " "
+  txt6 = " "
+  txt7 = " "
+  txt8 = " "
+  document.getElementById("addcustom1").innerHTML = txt1; 
+  document.getElementById("addcustom2").innerHTML = txt2; 
+  document.getElementById("addcustom3").innerHTML = txt3; 
+  document.getElementById("addcustom4").innerHTML = txt4; 
+  document.getElementById("addcustom5").innerHTML = txt5; 
+  document.getElementById("addcustom6").innerHTML = txt6; 
+  document.getElementById("addcustom7").innerHTML = txt7; 
+  document.getElementById("addcustom8").innerHTML = txt8;
+}
+</script>
+
     </div>
   </div>
-</div><br><br>
+</div>
+
+<br><br>
 
 <footer class="container-fluid text-center">
 </footer>
