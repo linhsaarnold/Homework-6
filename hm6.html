@@ -64,7 +64,7 @@
         <div class="panel-heading" text-center>BELL PEPPERS</div>
         <div class="panel-body"><img src="https://github.com/linhsaarnold/Homework-5/blob/master/Bell%20Peppers.png?raw=true" class="img-responsive" alt="Bell Peppers"></div>
         <div class="add-button" text-center>
-            <button id="BellPeppers" onclick="javascript:add(1); myFunction1()">Add Bell Peppers ($1)</button>
+            <button id="BellPeppers" onclick="myFunction1(); myFunctionA(); add(1)">Add Bell Peppers ($1)</button>
         </div>
       </div>
     </div>
@@ -73,7 +73,7 @@
         <div class="panel-heading" text-center>MUSHROOMS</div>
         <div class="panel-body"><img src="https://github.com/linhsaarnold/Homework-5/blob/master/Mushroom.jpg?raw=true" class="img-responsive" alt="Mushrooms"></div>
         <div class="add-button" text-center>
-            <button onclick="javascript:add(1); myFunction2()">Add Mushrooms ($1)</button>
+            <button onclick="myFunction2(); myFunctionB(); add(1)">Add Mushrooms ($1)</button>
         </div>
       </div>
     </div>
@@ -82,7 +82,7 @@
         <div class="panel-heading" text-center>BACON</div>
         <div class="panel-body"><img src="https://github.com/linhsaarnold/Homework-5/blob/master/Bacon.jpg?raw=true" class="img-responsive" alt="Bacon"></div>
         <div class="add-button" text-center>
-            <button onclick="javascript:add(1); myFunction3()">Add Bacon ($1)</button>
+            <button onclick="myFunction3(); myFunctionC(); add(1)">Add Bacon ($1)</button>
         </div>
       </div>
     </div>
@@ -92,7 +92,7 @@
         <div class="col-sm-12">
           <div class="input-group">
             <span class="input-group-btn">
-            <button class="btn btn-secondary" onclick="javascript:add(2); myFunction4()">Add ($2)</button>
+            <button class="btn btn-secondary" onclick="myFunction4(); myFunctionD(); add(1)">Add ($1)</button>
             </span>
             <input type="text" id="topping1" class="form-control" placeholder="Add up to 5 custom toppings...">
           </div>
@@ -101,7 +101,7 @@
         <div class="col-sm-12">
           <div class="input-group">
             <span class="input-group-btn">
-            <button class="btn btn-info" onclick="javascript:add(2); myFunction5()">Add ($2)</button>
+            <button class="btn btn-info" onclick="myFunction5(); myFunctionE(); add(1)">Add ($1)</button>
             </span>
             <input type="text" id="topping2" class="form-control" placeholder="...">
           </div>
@@ -110,7 +110,7 @@
         <div class="col-sm-12">
           <div class="input-group">
             <span class="input-group-btn">
-            <button class="btn btn-secondary" onclick="javascript:add(2); myFunction6()">Add ($2)</button>
+            <button class="btn btn-secondary" onclick="myFunction6(); myFunctionF(); add(1)">Add ($1)</button>
             </span>
             <input type="text" id="topping3" class="form-control" placeholder="...">
           </div>
@@ -119,7 +119,7 @@
         <div class="col-sm-12">
           <div class="input-group">
             <span class="input-group-btn">
-            <button class="btn btn-info" onclick="javascript:add(2); myFunction7()">Add ($2)</button>
+            <button class="btn btn-info" onclick="myFunction7(); myFunctionG(); add(1)">Add ($1)</button>
             </span>
             <input type="text" id="topping4" class="form-control" placeholder="...">
           </div>
@@ -128,7 +128,7 @@
         <div class="col-sm-12">
           <div class="input-group">
             <span class="input-group-btn">
-            <button class="btn btn-secondary" onclick="javascript:add(2); myFunction8()">Add ($2)</button>
+            <button class="btn btn-secondary" onclick="myFunction8(); myFunctionH(); add(1)">Add ($1)</button>
             </span>
             <input type="text" id="topping5" class="form-control" placeholder="...">
           </div>
@@ -136,31 +136,66 @@
       </div>
     </div>
   </div>
-</div><br>
-</script>
+</div>
 
+<br>
 
-<div class="container">    
-  <div class="row">
-    <div class="col-sm-12 bg-info container text-center" id="receipt">
-
-          <h1>Receipt:</h1>
-          <br>
-          <p id="addcustom1"></p>
-          <br>
-          <p id="addcustom2"></p>
-          <br>
-          <p id="addcustom3"></p>
-          <br>
-          <p id="addcustom4"></p>
-          <br>
-          <p id="addcustom5"></p>
-          <br>
-          <p id="addcustom6"></p>
-          <br>
-          <p id="addcustom7"></p>
-          <br>
-          <p id="addcustom8"></p>
+<div class="container bg-info">
+  <div class="text-center">
+    <h2>Receipt</h2>
+  </div>           
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Toppings</th>
+        <th>Quantity</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td id="addcustom1"></td>
+        <td><span id="totalbellpeppers">0</span></td>
+        <td><span id="totalbellpepperscost">0</span></td>
+      </tr>
+      <tr>
+        <td id="addcustom2"></td>
+        <td><span id="totalmushrooms">0</span></td>
+        <td><span id="totalmushroomscost">0</span></td>
+      </tr>
+      <tr>
+        <td id="addcustom3"></td>
+        <td><span id="totalbacon">0</span></td>
+        <td><span id="totalbaconcost">0</span></td>
+      </tr>
+      <tr>
+        <td id="addcustom4"></td>
+        <td><span id="total1">0</span></td>
+        <td><span id="total1cost">0</span></td>
+      </tr>
+      <tr>
+        <td id="addcustom5"></td>
+        <td><span id="total2">0</span></td>
+        <td><span id="total2cost">0</span></td>
+      </tr>
+      <tr>
+        <td id="addcustom6"></td>
+        <td><span id="total3">0</span></td>
+        <td><span id="total3cost">0</span></td>
+      </tr>
+      <tr>
+        <td id="addcustom7"></td>
+        <td><span id="total4">0</span></td>
+        <td><span id="total4cost">0</span></td>
+      </tr>
+      <tr>
+        <td id="addcustom8"></td>
+        <td><span id="total5">0</span></td>
+        <td><span id="total5cost">0</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 <script>
 function myFunction1() {
@@ -217,15 +252,102 @@ function myFunction8() {
     document.getElementById("addcustom8").innerHTML = txt8;
 }
 </script>
-   
+
+<script>
+var count = 0;
+function myFunctionA(){
+count++;
+document.getElementById("totalbellpeppers").innerHTML = count;
+document.getElementById("totalbellpepperscost").innerHTML = "$" + count
+}
+</script>
+
+<script>
+var count = 0;
+function myFunctionB(){
+count++;
+document.getElementById("totalmushrooms").innerHTML = count;
+document.getElementById("totalmushroomscost").innerHTML = "$" + count
+}
+</script>
+
+<script>
+var count = 0;
+function myFunctionC(){
+count++;
+document.getElementById("totalbacon").innerHTML = count;
+document.getElementById("totalbaconcost").innerHTML = "$" + count
+}
+</script>
+
+<script>
+var count = 0;
+function myFunctionD(){
+count++;
+document.getElementById("total1").innerHTML = count;
+document.getElementById("total1cost").innerHTML = "$" + count
+}
+</script>
+
+<script>
+var count = 0;
+function myFunctionE(){
+count++;
+document.getElementById("total2").innerHTML = count;
+document.getElementById("total2cost").innerHTML = "$" + count
+}
+</script>
+
+<script>
+var count = 0;
+function myFunctionF(){
+count++;
+document.getElementById("total3").innerHTML = count;
+document.getElementById("total3cost").innerHTML = "$" + count
+}
+</script>
+
+<script>
+var count = 0;
+function myFunctionG(){
+count++;
+document.getElementById("total4").innerHTML = count;
+document.getElementById("total4cost").innerHTML = "$" + count
+}
+</script>
       
-          Subtotal $<span id="Subtotal">0</span> 
-          <br>
-          Tax $<span id="Tax">0</span>
-          <br>
-          Total $<span id="Total">0</span>
-          <br>
-          <button onclick="javascript:reset(); myFunction9()">Clear</button>
+<script>
+var count = 0;
+function myFunctionH(){
+count++;
+document.getElementById("total5").innerHTML = count;
+document.getElementById("total5cost").innerHTML = "$" + count
+}
+</script>
+
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-12 bg-info container text-center">
+        Subtotal $<span id="Subtotal">0</span> 
+        <br>
+        Tax $<span id="Tax">0</span>
+        <br>
+        Total $<span id="Total">0</span>
+        <br>
+        <button onclick="javascript:reset(); myFunction9()">Clear</button>
+
+<script>
+var counter = 0;
+var a = 0;
+var add = function(valueToAdd){
+        a += valueToAdd;
+        b = a * 0.12
+        c = a + b
+        document.getElementById('Subtotal').innerHTML = a;
+        document.getElementById('Tax').innerHTML = b;
+        document.getElementById('Total').innerHTML = c;
+		}
+</script>
 
 <script>
 function myFunction9(){
