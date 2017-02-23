@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="hm6.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="hm6.js"></script>
@@ -144,7 +145,7 @@
   <div class="text-center">
     <h2>Receipt</h2>
   </div>           
-  <table class="table">
+  <table class="table" id ="tabletable">
     <thead>
       <tr>
         <th>Toppings</th>
@@ -197,133 +198,6 @@
   </table>
 </div>
 
-<script>
-function myFunction1() {
-    txt1 = "Bell Peppers"
-    document.getElementById("addcustom1").innerHTML = txt1;
-}
-</script>
-
-<script>
-function myFunction2() {
-    txt2 = "Mushrooms"
-    document.getElementById("addcustom2").innerHTML = txt2;
-}
-</script>
-
-<script>
-function myFunction3() {
-    txt3 = "Bacon"
-    document.getElementById("addcustom3").innerHTML = txt3;
-}
-</script>
-
-<script>
-function myFunction4() {
-    txt4 = document.getElementById("topping1").value;
-    document.getElementById("addcustom4").innerHTML = txt4;
-}
-</script>
-
-<script>
-function myFunction5() {
-    txt5 = document.getElementById("topping2").value;
-    document.getElementById("addcustom5").innerHTML = txt5;
-}
-</script>
-
-<script>
-function myFunction6() {
-    txt6 = document.getElementById("topping3").value;
-    document.getElementById("addcustom6").innerHTML = txt6;
-}
-</script>
-
-<script>
-function myFunction7() {
-    txt5 = document.getElementById("topping4").value;
-    document.getElementById("addcustom7").innerHTML = txt5;
-}
-</script>
-
-<script>
-function myFunction8() {
-    txt8 = document.getElementById("topping5").value;
-    document.getElementById("addcustom8").innerHTML = txt8;
-}
-</script>
-
-<script>
-var count = 0;
-function myFunctionA(){
-count++;
-document.getElementById("totalbellpeppers").innerHTML = count;
-document.getElementById("totalbellpepperscost").innerHTML = "$" + count
-}
-</script>
-
-<script>
-var count = 0;
-function myFunctionB(){
-count++;
-document.getElementById("totalmushrooms").innerHTML = count;
-document.getElementById("totalmushroomscost").innerHTML = "$" + count
-}
-</script>
-
-<script>
-var count = 0;
-function myFunctionC(){
-count++;
-document.getElementById("totalbacon").innerHTML = count;
-document.getElementById("totalbaconcost").innerHTML = "$" + count
-}
-</script>
-
-<script>
-var count = 0;
-function myFunctionD(){
-count++;
-document.getElementById("total1").innerHTML = count;
-document.getElementById("total1cost").innerHTML = "$" + count
-}
-</script>
-
-<script>
-var count = 0;
-function myFunctionE(){
-count++;
-document.getElementById("total2").innerHTML = count;
-document.getElementById("total2cost").innerHTML = "$" + count
-}
-</script>
-
-<script>
-var count = 0;
-function myFunctionF(){
-count++;
-document.getElementById("total3").innerHTML = count;
-document.getElementById("total3cost").innerHTML = "$" + count
-}
-</script>
-
-<script>
-var count = 0;
-function myFunctionG(){
-count++;
-document.getElementById("total4").innerHTML = count;
-document.getElementById("total4cost").innerHTML = "$" + count
-}
-</script>
-      
-<script>
-var count = 0;
-function myFunctionH(){
-count++;
-document.getElementById("total5").innerHTML = count;
-document.getElementById("total5cost").innerHTML = "$" + count
-}
-</script>
 
 <div class="container">    
   <div class="row">
@@ -334,42 +208,8 @@ document.getElementById("total5cost").innerHTML = "$" + count
         <br>
         Total $<span id="Total">0</span>
         <br>
-        <button onclick="javascript:reset(); myFunction9()">Clear</button>
-
-<script>
-var counter = 0;
-var a = 0;
-var add = function(valueToAdd){
-        a += valueToAdd;
-        b = a * 0.12
-        c = a + b
-        document.getElementById('Subtotal').innerHTML = a;
-        document.getElementById('Tax').innerHTML = b;
-        document.getElementById('Total').innerHTML = c;
-		}
-</script>
-
-<script>
-function myFunction9(){
-  txt1 = " "
-  txt2 = " "
-  txt3 = " "
-  txt4 = " "
-  txt5 = " "
-  txt6 = " "
-  txt7 = " "
-  txt8 = " "
-  document.getElementById("addcustom1").innerHTML = txt1; 
-  document.getElementById("addcustom2").innerHTML = txt2; 
-  document.getElementById("addcustom3").innerHTML = txt3; 
-  document.getElementById("addcustom4").innerHTML = txt4; 
-  document.getElementById("addcustom5").innerHTML = txt5; 
-  document.getElementById("addcustom6").innerHTML = txt6; 
-  document.getElementById("addcustom7").innerHTML = txt7; 
-  document.getElementById("addcustom8").innerHTML = txt8;
-}
-</script>
-
+        <button onclick="myFunctionThanks()">Submit Order</button>
+        <button onclick="myFunctionResetTotals(); myFunctionResetTXT(); myFunctionResetUnits(); myFunctionResetToppingTotals()">Clear</button>
     </div>
   </div>
 </div>
